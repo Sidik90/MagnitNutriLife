@@ -1,5 +1,5 @@
 from aiogram.utils.keyboard import InlineKeyboardBuilder
-from config.config import config
+from ..config.config import config
 
 
 def welcome_keyboard():

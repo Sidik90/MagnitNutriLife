@@ -1,8 +1,7 @@
 from aiogram import Router, F, Bot
 from aiogram.types import CallbackQuery
-from keyboards.builders import gifts_keyboard
-
-from MagnitNutriLife.services.subscription import check_subscription
+from ..keyboards.builders import gifts_keyboard
+from ..services.subscription import check_subscription
 
 router = Router()
 

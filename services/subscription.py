@@ -1,5 +1,5 @@
 from aiogram import Bot
-from ..config.config import config
+from config.config import config
 
 from MagnitNutriLife.keyboards.builders import gifts_keyboard, welcome_keyboard
 

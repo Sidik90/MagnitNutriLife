@@ -1,3 +1,9 @@
+import sys
+from pathlib import Path
+
+sys.path.append(str(Path(__file__).parent))
+
+
 import asyncio
 import logging
 from aiogram import Bot, Dispatcher

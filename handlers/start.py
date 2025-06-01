@@ -1,7 +1,7 @@
 from aiogram import Router, F, Bot
 from aiogram.types import Message
-from ..keyboards.builders import welcome_keyboard
-from ..services.subscription import check_subscription
+from keyboards.builders import welcome_keyboard
+from services.subscription import check_subscription
 
 router = Router()
 

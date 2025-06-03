@@ -22,7 +22,6 @@ async def send_consultation_invite(bot: Bot, user_id: int):
         logger.error(f"Не удалось отправить приглашение {user_id}: {e}")
 
 
-async def schedule_consultation_invite(user_id: int):
+async def schedule_consultation_invite(user_id: int, bot: Bot):
     await asyncio.sleep(config.consultation_delay)
-    bot = Bot.get_current()
     await send_consultation_invite(bot, user_id)

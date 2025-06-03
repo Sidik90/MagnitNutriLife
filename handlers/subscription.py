@@ -21,7 +21,7 @@ async def check_subscription(callback: types.CallbackQuery):
             builder = InlineKeyboardBuilder()
             builder.row(
                 types.InlineKeyboardButton(
-                    text="Записаться на консультацию",
+                    text="Записаться на консультацию📝",
                     callback_data="signup_consultation",
                 )
             )

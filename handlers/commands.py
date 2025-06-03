@@ -1,4 +1,5 @@
 from aiogram import Router, types
+from aiogram.client import bot
 from aiogram.filters import Command
 from aiogram.utils.keyboard import InlineKeyboardBuilder
 
@@ -15,7 +16,7 @@ async def cmd_start(message: types.Message):
         builder = InlineKeyboardBuilder()
         builder.row(
             types.InlineKeyboardButton(
-                text="Подписаться на канал", url=config.channel_invite_link
+                text="Подписаться на канал🫶", url=config.channel_invite_link
             )
         )
         builder.row(
@@ -27,7 +28,7 @@ async def cmd_start(message: types.Message):
         await message.answer(config.welcome_message, reply_markup=builder.as_markup())
 
         # Запланировать приглашение на консультацию
-        await schedule_consultation_invite(message.from_user.id)
+        await schedule_consultation_invite(message.from_user.id, bot)
 
         logger.info(f"Новый пользователь: {message.from_user.id}")
     except Exception as e:

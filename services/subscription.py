@@ -1,7 +1,7 @@
 from aiogram import Bot
 from config.config import config
 
-from MagnitNutriLife.keyboards.builders import gifts_keyboard, welcome_keyboard
+from keyboards.builders import gifts_keyboard, welcome_keyboard
 
 
 async def check_subscription(bot: Bot, user_id: int):
@@ -10,7 +10,11 @@ async def check_subscription(bot: Bot, user_id: int):
         if member.status in ["member", "administrator", "creator"]:
             await bot.send_message(
                 user_id,
-                "🎉 Спасибо за подписку! Выберите подарок:",
+                "🎉 Спасибо за подписку! Выберите подарок: \n\n"
+                "1. 🩺🔬Здоровье под Микроскопом: Погружение в Анализы \n"
+                "2. 🌊✨Легкость без Отека: Простые Шаги к Свободе \n"
+                "3. ⚡🍽️Ключ к Энергии: Управление Инсулином\n\n"
+                "Если хочешь узнать больше, запишись на бесплатную консультацию!📝",
                 reply_markup=gifts_keyboard(),
             )
         else:
